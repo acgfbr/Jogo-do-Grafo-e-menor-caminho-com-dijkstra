@@ -1,0 +1,23 @@
+c:\users\aluno\documents\visual studio 2010\Projects\grafinho_1\grafinho_1\bin\Debug\grafinho_1.exe
+c:\users\aluno\documents\visual studio 2010\Projects\grafinho_1\grafinho_1\bin\Debug\grafinho_1.pdb
+c:\users\aluno\documents\visual studio 2010\Projects\grafinho_1\grafinho_1\obj\x86\Debug\grafinho_1.Form1.resources
+c:\users\aluno\documents\visual studio 2010\Projects\grafinho_1\grafinho_1\obj\x86\Debug\grafinho_1.Properties.Resources.resources
+c:\users\aluno\documents\visual studio 2010\Projects\grafinho_1\grafinho_1\obj\x86\Debug\grafinho_1.csproj.GenerateResource.Cache
+c:\users\aluno\documents\visual studio 2010\Projects\grafinho_1\grafinho_1\obj\x86\Debug\grafinho_1.exe
+c:\users\aluno\documents\visual studio 2010\Projects\grafinho_1\grafinho_1\obj\x86\Debug\grafinho_1.pdb
+E:\grafinho_1\grafinho_1\grafinho_1\obj\x86\Debug\grafinho_1.exe
+E:\grafinho_1\grafinho_1\grafinho_1\obj\x86\Debug\grafinho_1.pdb
+E:\grafinho_1\grafinho_1\grafinho_1\bin\Debug\grafinho_1.exe
+E:\grafinho_1\grafinho_1\grafinho_1\bin\Debug\grafinho_1.pdb
+E:\grafinho_1\grafinho_1\grafinho_1\obj\x86\Debug\grafinho_1.csprojResolveAssemblyReference.cache
+E:\grafinho_1\grafinho_1\grafinho_1\obj\x86\Debug\grafinho_1.Form1.resources
+E:\grafinho_1\grafinho_1\grafinho_1\obj\x86\Debug\grafinho_1.Properties.Resources.resources
+E:\grafinho_1\grafinho_1\grafinho_1\obj\x86\Debug\grafinho_1.csproj.GenerateResource.Cache
+C:\Users\Agily18\Documents\Jogo-do-Grafo-e-menor-caminho-com-dijkstra\grafinho_1\obj\x86\Debug\grafinho_1.exe
+C:\Users\Agily18\Documents\Jogo-do-Grafo-e-menor-caminho-com-dijkstra\grafinho_1\obj\x86\Debug\grafinho_1.pdb
+C:\Users\Agily18\Documents\Jogo-do-Grafo-e-menor-caminho-com-dijkstra\grafinho_1\bin\Debug\grafinho_1.exe
+C:\Users\Agily18\Documents\Jogo-do-Grafo-e-menor-caminho-com-dijkstra\grafinho_1\bin\Debug\grafinho_1.pdb
+C:\Users\Agily18\Documents\Jogo-do-Grafo-e-menor-caminho-com-dijkstra\grafinho_1\obj\x86\Debug\grafinho_1.csprojResolveAssemblyReference.cache
+C:\Users\Agily18\Documents\Jogo-do-Grafo-e-menor-caminho-com-dijkstra\grafinho_1\obj\x86\Debug\grafinho_1.Form1.resources
+C:\Users\Agily18\Documents\Jogo-do-Grafo-e-menor-caminho-com-dijkstra\grafinho_1\obj\x86\Debug\grafinho_1.Properties.Resources.resources
+C:\Users\Agily18\Documents\Jogo-do-Grafo-e-menor-caminho-com-dijkstra\grafinho_1\obj\x86\Debug\grafinho_1.csproj.GenerateResource.Cache
