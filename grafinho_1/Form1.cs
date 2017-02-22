@@ -39,7 +39,9 @@ namespace grafinho_1
 
             txtHoriz.Text = "5";
             txtVertic.Text = "5";
-            
+
+
+
         }
 
         private void btnGeraMatriz_Click(object sender, EventArgs e)
@@ -267,7 +269,7 @@ namespace grafinho_1
             achaMenorCaminho(arestas);
 
             button1_Click(null, new EventArgs());
-            
+
         }
 
         void btn_Click(object sender, EventArgs e)
@@ -366,6 +368,180 @@ namespace grafinho_1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            var total = (global_hor*global_ver) - 1;
+            for (int i = 0; i < global_hor; i++)
+            {
+                for (int j = 0; j < global_ver; j++)
+                {
+                    /*if (i == 0 && j == 0)
+                        continue;
+                        */
+                    var found = matrizGeral.Find(p => p.i == i && p.j == j);
+                    if (found != null)
+                    {
+                        Pen pen = new Pen(Color.Black, 3);
+                        Graphics g = panelBtns.CreateGraphics();
+
+                        var pFrom = new Point(panelBtns.Controls[found.namecomp].Location.X,
+                            panelBtns.Controls[found.namecomp].Location.Y + 25);
+                        var pTo = new Point(panelBtns.Controls[found.namecomp].Location.X - 20,
+                            panelBtns.Controls[found.namecomp].Location.Y + 25);
+
+                        var pFrom2 = new Point(panelBtns.Controls[found.namecomp].Location.X + 25,
+                            panelBtns.Controls[found.namecomp].Location.Y + 25);
+                        var pTo2 = new Point(panelBtns.Controls[found.namecomp].Location.X + 25,
+                            panelBtns.Controls[found.namecomp].Location.Y - 25);
+
+                        g.DrawLine(pen, pFrom2, pTo2);
+                        g.DrawLine(pen, pFrom, pTo);
+
+                        g.Dispose();
+
+                         if (i_global == global_hor - 1 && j_global == global_ver - 1)
+                            continue;
+                            
+
+
+                        
+                        var find2 = matrizGeral.Find(t => t.i == i - 1 && t.j == j);
+                        var find3 = matrizGeral.Find(t => t.i == i && t.j == j + 1);
+                        var find4 = matrizGeral.Find(t => t.i == i + 1 && t.j == j);
+                        var find5 = matrizGeral.Find(t => t.i == i && t.j == j - 1);
+                        
+                        if (find2 != null)
+                        {
+                            if (find2.namecomp == "btn0")
+                                continue;
+                            if (find2.namecomp == "btn" + total)
+                                continue;
+
+                            //panelBtns.Controls[find2.namecomp].BackColor = Color.Red;
+
+                            var weight = int.Parse(panelBtns.Controls[find2.namecomp].Text);
+
+                            Cantos.Add(new canto(find2.i, find2.j, weight));
+
+                            Cantos.Add(new canto(find2.i - 1, find2.j, weight));
+                            Cantos.Add(new canto(find2.i, find2.j + 1, weight));
+                            Cantos.Add(new canto(find2.i + 1, find2.j, weight));
+                            Cantos.Add(new canto(find2.i, find2.j - 1, weight));
+                        }
+                        
+                        if (find3 != null)
+                        {
+                            if (find3.namecomp == "btn0")
+                                continue;
+                            if (find3.namecomp == "btn" + total)
+                                continue;
+                            //panelBtns.Controls[find3.namecomp].BackColor = Color.Red;
+
+                            var weight = int.Parse(panelBtns.Controls[find3.namecomp].Text);
+
+                            Cantos.Add(new canto(find3.i, find3.j, weight));
+
+                            Cantos.Add(new canto(find3.i - 1, find3.j, weight));
+                            Cantos.Add(new canto(find3.i, find3.j + 1, weight));
+                            Cantos.Add(new canto(find3.i + 1, find3.j, weight));
+                            Cantos.Add(new canto(find3.i, find3.j - 1, weight));
+                        }
+                        if (find4 != null)
+                        {
+                            if (find4.namecomp == "btn0")
+                                continue;
+                            if (find4.namecomp == "btn" + total)
+                                continue;
+                            // panelBtns.Controls[find4.namecomp].BackColor = Color.Red;
+
+                            var weight = int.Parse(panelBtns.Controls[find4.namecomp].Text);
+
+                            Cantos.Add(new canto(find4.i, find4.j, weight));
+
+                            Cantos.Add(new canto(find4.i - 1, find4.j, weight));
+                            Cantos.Add(new canto(find4.i, find4.j + 1, weight));
+                            Cantos.Add(new canto(find4.i + 1, find4.j, weight));
+                            Cantos.Add(new canto(find4.i, find4.j - 1, weight));
+                        }
+                        
+                        if (find5 != null)
+                        {
+                            if (find5.namecomp == "btn0")
+                                continue;
+                            if (find5.namecomp == "btn" + total)
+                                continue;
+                            //panelBtns.Controls[find5.namecomp].BackColor = Color.Red;
+
+                            var weight = int.Parse(panelBtns.Controls[find5.namecomp].Text);
+
+                            Cantos.Add(new canto(find5.i, find5.j, weight));
+
+                            Cantos.Add(new canto(find5.i - 1, find5.j, weight));
+                            Cantos.Add(new canto(find5.i, find5.j + 1, weight));
+                            Cantos.Add(new canto(find5.i + 1, find5.j, weight));
+                            Cantos.Add(new canto(find5.i, find5.j - 1, weight));
+                        }
+                        
+                       
+                            
+
+                    }
+                    
+
+
+                }
+
+                //MessageBox.Show(i.ToString());
+            }
+
+            double[,] G = new double[Vertices.Count, Vertices.Count];
+
+            try
+            {
+
+                foreach (var canto in Cantos)
+                {
+                    if (canto.de < 0)
+                        continue;
+                    if (canto.para < 0)
+                        continue;
+
+                    G[canto.de, canto.para] = canto.peso;
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+            /* Runs dijkstra */
+            try
+            {
+                Dijkstra dijk = new Dijkstra(G, 0);
+                double[] dist = dijk.dist;
+                int[] path = dijk.path;
+
+              
+                for (int x = 0; x < dist.Length; x++)
+                {
+                    if (dist[x] == Double.PositiveInfinity)
+                        continue;
+
+                    var asdasd = Vertices[x];
+                    var found = matrizGeral.Find(p => p.i == asdasd.p.X && p.j == asdasd.p.Y);
+
+                    if (asdasd.p.X == 0 && asdasd.p.Y == 0)
+                        continue;
+                    if (found != null)
+                        panelBtns.Controls[found.namecomp].BackColor = Color.Red;
+                }
+            }
+            catch (ArgumentException err)
+            {
+                MessageBox.Show(err.Message);
+            }
+
+            /*
             for (int i = 0; i <= global_hor*global_ver; i++)
             {
                 if (i_global == 0 && j_global == 0)
@@ -445,7 +621,7 @@ namespace grafinho_1
 
                 i_global++;
                 //j_global++;
-            }
+            }*/
 
         }
     }
